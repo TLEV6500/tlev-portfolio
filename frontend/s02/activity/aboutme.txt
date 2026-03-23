@@ -2,3 +2,5 @@ Name: Tim Leobert E. Villacin
 Nickname: Tim
 
 Motivation: I want to become a professional software developer (web, mobile, other software fields). But not just any developer--I want to be a great one. But I need guidance and structure in my journey to this career, and I am struggling to efficiently do that on my own. Which is why I joined this bootcamp, to prepare me and slingshot me to reputable companies that will open the door for me to this line of work.
+
+Work Experience: I only got a small work experience in anything. I was able to teach as a contractual music tutor for 2 years in a church and a school, teaching piano, violin, and voice. I also have some experience in Web3 dApp and Frontend Development in a crypto startup (less than a year), where I was tasked to pitch a rebranding of brand colors and textures, develop UI for a service, and developed a "blockchain" API and JSON-RPC integration for their service.
