@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Activity</title>
+    </head>
+    <body>
+        <header>
+            <h1>Zuitt IT Solutions</h1>
+        </header>
+        <main>
+            <h2>Products Offered</h2>
+            <table border="1">
+                <thead>
+                    <th scope="col">Package</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>&#8369; 500.00</td>
+                        <td>
+                            Package includes a fully functional website with
+                            desired specifications.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>&#8369; 1000.00</td>
+                        <td>
+                            Enjoy all the benefits of the basic package and also
+                            includes site support and maintainance.
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">
+                            Additional features after initial project is
+                            inclusive of charges
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <br />
+        <hr />
+        <section>
+            <h2>Contact Form</h2>
+            <form action="">
+                <label
+                    >First Name:<br /><input
+                        id="first_name"
+                        type="text"
+                        name="first_name"
+                        required
+                        autocomplete /></label
+                ><br />
+                <label
+                    >Last Name:<br /><input
+                        id="last_name"
+                        type="text"
+                        name="last_name"
+                        required
+                        autocomplete /></label
+                ><br />
+                <label
+                    >Email<br /><input
+                        id="email"
+                        type="email"
+                        name="email"
+                        required
+                        autocomplete /></label
+                ><br />
+                <label
+                    >Contact Number:<br /><input
+                        id="contact"
+                        type="tel"
+                        name="contact"
+                        required
+                        autocomplete /></label
+                ><br />
+                <label>
+                    Service Type:
+                    <br />
+                    <select id="service_type" name="service_type" required>
+                        <option value="front_end_programming">
+                            Front End Programming
+                        </option>
+                        <option value="back_end_programming">
+                            Back End Programming
+                        </option>
+                        <option value="full_stack_programming">
+                            Full Stack Programming
+                        </option>
+                    </select></label
+                >
+                <br />
+                <label>Preferred Contact:</label><br /><label
+                    ><input
+                        type="checkbox"
+                        name="prefer_email"
+                        value="true"
+                    />Email</label
+                ><br /><label
+                    ><input
+                        type="checkbox"
+                        name="prefer_phone"
+                        value="true"
+                    />Phone</label
+                >
+                <br />
+                <label>Package: </label><br /><label
+                    ><input
+                        type="radio"
+                        name="package"
+                        value="basic"
+                    />Basic</label
+                >
+                <br />
+                <label
+                    ><input
+                        type="radio"
+                        name="package"
+                        value="premium"
+                    />Premium</label
+                >
+                <br />
+                <label
+                    >Message<br /><textarea name="message" rows="5"></textarea>
+                </label>
+                <br />
+                <button type="submit">Send Inquiry</button>
+                <br />
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </body>
+</html>
