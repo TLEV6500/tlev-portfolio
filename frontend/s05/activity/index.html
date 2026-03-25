@@ -9,13 +9,15 @@
         <header>
             <h1>Zuitt IT Solutions</h1>
         </header>
-        <main>
+        <section>
             <h2>Products Offered</h2>
             <table border="1">
                 <thead>
-                    <th scope="col">Package</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Description</th>
+                    <tr>
+                        <th scope="col">Package</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Description</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
@@ -44,7 +46,7 @@
                     </tr>
                 </tfoot>
             </table>
-        </main>
+        </section>
         <br />
         <hr />
         <section>
@@ -77,7 +79,7 @@
                 <label
                     >Contact Number:<br /><input
                         id="contact"
-                        type="tel"
+                        type="number"
                         name="contact"
                         required
                         autocomplete /></label
@@ -101,14 +103,14 @@
                 <label>Preferred Contact:</label><br /><label
                     ><input
                         type="checkbox"
-                        name="prefer_email"
-                        value="true"
+                        name="preferred_contact"
+                        value="email"
                     />Email</label
                 ><br /><label
                     ><input
                         type="checkbox"
-                        name="prefer_phone"
-                        value="true"
+                        name="preferred_contact"
+                        value="phone"
                     />Phone</label
                 >
                 <br />
