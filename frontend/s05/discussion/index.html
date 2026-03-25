@@ -79,5 +79,70 @@
                 </tr>
             </tfoot>
         </table>
+
+        <h2>HTML Forms</h2>
+        <p><em>Input elements that make up a form</em></p>
+
+        <!-- form tag = creates an HTML form to capture user input -->
+        <!-- button tag = creates a button that will trigger the form submission -->
+        <!-- action attribute = used to define where the information will be sent upon submission -->
+        <!-- type attribute = define how the button will behave -->
+        <!-- label tag = creates a text element that will serve as a label for an input field -->
+        <!-- input tag = capture user input -->
+        <!-- "for" attribute is used with the "id" attribute. -->
+        <!-- type attribute = define what type of information the input field should have -->
+        <!-- name attribute = provide the input field with a name that we can associate with the information provided by the user -->
+        <!-- require attribute = strict implementation of user input -->
+        <!-- autocomplete attribute = provide suggestions for text inputs -->
+        <!-- select tag = creates a dropdown menu based on the nested options tag -->
+        <!-- option tag = creates an option for the dropdown menu -->
+
+        <form action="https://google.com">
+            <label for="full_name">Full Name:</label>
+            <input
+                type="text"
+                name="full_name"
+                id="full_name"
+                required
+                autocomplete
+            /><br />
+
+            <label for="birth_date">Birth Date:</label>
+            <input
+                type="date"
+                name="birth_date"
+                id="birth_date"
+                required
+            /><br />
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required /><br />
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option></select
+            ><br /><br />
+
+            <label for="notes">Notes:</label>
+            <textarea name="notes" rows="5" id="notes"></textarea><br /><br />
+
+            <label>New User:</label><br />
+            <input type="radio" name="new_user" id="user-type1" value="yes" />
+            <label for="user-type1">Yes</label><br />
+            <input type="radio" name="new_user" id="user-type2" value="no" />
+            <label for="user-type2">No</label><br /><br />
+
+            <label>Role:</label><br />
+            <input type="checkbox" name="role1" id="role1" value="developer" />
+            <label for="role1">Developer</label><br />
+            <input type="checkbox" name="role2" id="role2" value="student" />
+            <label for="role2">Student</label><br />
+            <input type="checkbox" name="role3" id="role3" value="manager" />
+            <label for="role3">Manager</label><br /><br />
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
     </body>
 </html>
