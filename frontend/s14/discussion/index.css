@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-float {
+    width: 250px;
+    height: 250px;
+    /*left, right, inherit*/
+    float: inherit;
+}
+
+.parent-element {
+    background-color: skyblue;
+    padding: 10px;
+    position: relative;
+    height: 800px;
+}
+
+.child-one {
+    background-color: gray;
+    padding: 10px;
+}
+
+.child-two {
+    background-color: yellow;
+    padding: 10px;
+    /*static (does not get affected by left, right, top, and bottom properties), relative (responsive with changes), fixed (also removed from normal flow), sticky(normal flow but sticks in parent element only) */
+    /*
+    Absolute (positioned relative to their parent element, removed from normal flow)
+    One thing to note is that an element with position: absolute is positioned relative to its closest positioned ancestor. That means that the parent element has to have a position value other than position: static.
+
+    If the closest parent element is not positioned, it is positioned relative to the next parent element that is positioned. If there's no positioned ancestor element, it is positioned relative to the element.*/
+    position: sticky;
+    /*left: 10px;
+    bottom: 10px;*/
+    top: 0;
+}
+
+.child-three {
+    background-color: gray;
+    padding: 10px;
+}
+
+html {
+    height: 800vh;
+}
+
+.container {
+    position: relative;
+}
+
+.black-box {
+    position: relative;
+    z-index: 1;
+    border: 2px solid black;
+    height: 100px;
+    margin: 30px;
+}
+
+.gray-box {
+    position: absolute;
+    z-index: 3;
+    background: lightgray;
+    height: 60px;
+    width: 70%;
+    left: 50px;
+    top: 50px;
+}
+
+.green-box {
+    position: absolute;
+    z-index: 2;
+    background: lightgreen;
+    width: 35%;
+    left: 270px;
+    top: -15px;
+    height: 100px;
+}
