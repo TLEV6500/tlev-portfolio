@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fixed CSS for rigid Flexbox geometry */
+:root {
+    --board-bg: #e4efe7;
+    --line: #212529;
+}
+
+.board {
+    background-color: var(--board-bg);
+    font-size: 0.65rem;
+    max-width: 900px;
+    aspect-ratio: 1;
+    margin: auto;
+    border: 2px solid var(--line);
+}
+
+/* Layout Structure */
+.row-tb {
+    height: 14%;
+    flex-shrink: 0;
+}
+.col-lr {
+    width: 14%;
+    flex-shrink: 0;
+}
+
+/* Squares */
+.corner {
+    width: 14%;
+    flex-shrink: 0;
+    outline: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: white;
+    padding: 4px;
+}
+
+.space {
+    flex: 1; /* Shares width equally */
+    outline: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+}
+
+.space-v {
+    flex: 1; /* Shares height equally */
+    outline: 1px solid var(--line);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Color Group Headers */
+.color-bar-top {
+    height: 25%;
+    border-bottom: 1px solid var(--line);
+    width: 100%;
+}
+.color-bar-bottom {
+    height: 25%;
+    border-top: 1px solid var(--line);
+    width: 100%;
+    margin-top: auto;
+}
+.color-bar-right {
+    width: 25%;
+    height: 100%;
+    border-left: 1px solid var(--line);
+    margin-left: auto;
+}
+.color-bar-left {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid var(--line);
+    margin-right: auto;
+}
+
+/* Epics */
+.c-brown {
+    background-color: #8b4513;
+    color: white;
+}
+.c-lblue {
+    background-color: #87ceeb;
+}
+.c-pink {
+    background-color: #ff69b4;
+}
+.c-orange {
+    background-color: #ff8c00;
+}
+.c-red {
+    background-color: #ed1c24;
+}
+.c-yellow {
+    background-color: #ffde00;
+}
+.c-green {
+    background-color: #00a650;
+}
+.c-dblue {
+    background-color: #0054a6;
+    color: white;
+}
