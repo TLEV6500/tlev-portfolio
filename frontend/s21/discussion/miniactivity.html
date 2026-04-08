@@ -1,0 +1,586 @@
+<!doctype html>
+
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>The Artisanal Archive | Modern Coffee Ephemera</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+            rel="stylesheet"
+        />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-background": "#1a1c1a",
+                            "outline-variant": "#c6c8b8",
+                            "on-primary-container": "#bed58e",
+                            "on-secondary-fixed": "#261911",
+                            "primary-fixed": "#d4eca2",
+                            error: "#ba1a1a",
+                            secondary: "#6d5a50",
+                            "on-error": "#ffffff",
+                            "on-secondary-container": "#725f54",
+                            background: "#faf9f6",
+                            "on-secondary-fixed-variant": "#54433a",
+                            outline: "#76786b",
+                            "surface-tint": "#52652a",
+                            "on-surface-variant": "#45483c",
+                            "surface-container": "#efeeeb",
+                            "inverse-on-surface": "#f2f1ee",
+                            "on-primary-fixed": "#141f00",
+                            "on-tertiary-container": "#f3bbed",
+                            "surface-container-low": "#f4f3f1",
+                            "on-secondary": "#ffffff",
+                            "on-tertiary-fixed": "#310a33",
+                            "tertiary-fixed-dim": "#edb5e7",
+                            "error-container": "#ffdad6",
+                            "on-tertiary-fixed-variant": "#623761",
+                            surface: "#faf9f6",
+                            "secondary-fixed": "#f7ddd0",
+                            tertiary: "#5a3059",
+                            "surface-container-highest": "#e3e2e0",
+                            "surface-container-high": "#e9e8e5",
+                            "secondary-fixed-dim": "#dac2b5",
+                            "inverse-primary": "#b8cf88",
+                            "inverse-surface": "#2f312f",
+                            "on-tertiary": "#ffffff",
+                            "primary-container": "#4a5d23",
+                            "surface-dim": "#dbdad7",
+                            "on-primary": "#ffffff",
+                            "on-error-container": "#93000a",
+                            "primary-fixed-dim": "#b8cf88",
+                            primary: "#33450d",
+                            "surface-variant": "#e3e2e0",
+                            "surface-bright": "#faf9f6",
+                            "tertiary-container": "#744772",
+                            "on-primary-fixed-variant": "#3b4d14",
+                            "surface-container-lowest": "#ffffff",
+                            "on-surface": "#1a1c1a",
+                            "tertiary-fixed": "#ffd6f8",
+                            "secondary-container": "#f5dbcd",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.125rem",
+                            lg: "0.25rem",
+                            xl: "0.5rem",
+                            full: "0.75rem",
+                        },
+                        fontFamily: {
+                            headline: ["Noto Serif"],
+                            body: ["Inter"],
+                            label: ["Inter"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .instax-border {
+                box-shadow: 0 10px 30px -10px rgba(109, 90, 80, 0.2);
+                padding: 0.75rem 0.75rem 2.5rem 0.75rem;
+            }
+            .grain-overlay {
+                background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBg7Iugelg4jYEFiRjycD_ovpRGRKa1qrq5kvIUiDhWhcPiZ-_9t8a8RxzMevYfVRaVqq40wXDF3BmS5qnDI0xVK50RsZodO5m77vRXJO7ZmacW6YuIK2mZPWWX61jcFSmFWdzUQB6DzoSB-IunPkFsDl5sNZhwmDyLp7RKm6vzjIpWRD69-jskyfhpeGNsUCDxS6ptxnTpAde0n_aNw_iqYD-Qq27J-eqwJPRWUVwdiOgJadsUC9cMPIxGoh0urQvVEazrtXpS1UQ);
+                opacity: 0.03;
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed"
+    >
+        <div class="fixed inset-0 grain-overlay z-[100]"></div>
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full z-50 bg-[#FAF9F6]/80 backdrop-blur-md">
+            <div
+                class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto w-full"
+            >
+                <a
+                    class="font-serif italic font-bold text-2xl text-[#33450D]"
+                    href="#"
+                    >Artisanal Archive</a
+                >
+                <div class="hidden md:flex items-center space-x-12">
+                    <a
+                        class="font-serif tracking-tight font-medium text-lg text-[#33450D] border-b-2 border-[#33450D] transition-colors duration-300"
+                        href="#menu"
+                        >Menu</a
+                    >
+                    <a
+                        class="font-serif tracking-tight font-medium text-lg text-[#6D5A50] hover:text-[#33450D] transition-colors duration-300"
+                        href="#beans"
+                        >Our Beans</a
+                    >
+                    <a
+                        class="font-serif tracking-tight font-medium text-lg text-[#6D5A50] hover:text-[#33450D] transition-colors duration-300"
+                        href="#visit"
+                        >Visit Us</a
+                    >
+                </div>
+                <button
+                    class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium tracking-tight scale-95 active:opacity-80 transition-all"
+                >
+                    Order Now
+                </button>
+            </div>
+        </nav>
+        <main class="pt-24">
+            <!-- Hero Section -->
+            <section class="max-w-7xl mx-auto px-8 py-16 md:py-24">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+                >
+                    <div class="space-y-8">
+                        <h1
+                            class="font-headline text-5xl md:text-7xl leading-tight text-primary font-bold -tracking-[0.03em]"
+                        >
+                            Honoring the <br />
+                            <span class="italic font-normal text-secondary"
+                                >Slow Pour</span
+                            >
+                            of Tradition.
+                        </h1>
+                        <p
+                            class="text-xl text-secondary max-w-md leading-relaxed"
+                        >
+                            Every cup is a curated chapter in our sensory
+                            archive. We source with integrity and brew with
+                            obsessive precision.
+                        </p>
+                        <div class="pt-4">
+                            <a
+                                class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-xl text-lg font-medium transition-all hover:shadow-xl hover:-translate-y-1"
+                                href="#menu"
+                            >
+                                View Menu
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="aspect-[4/5] overflow-hidden rounded-xl bg-surface-container-high instax-border bg-white rotate-2"
+                        >
+                            <img
+                                class="w-full h-full object-cover"
+                                data-alt="close-up of a classic silver moka pot brewing fresh coffee on a vintage stovetop with soft morning sunlight catching the steam"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4LN6MKMAtPewdP3yHns5Dm7tNLm26Tg_XOwrXyTb8UXgjEcHyUYLEhnPkYvZ5Ttik__LxU1XHOZc0tz5jmHkoUaRqIPdvL1ADf2gsbcrthnE9aUVDprHR2UnhKNxqf4YJqDWrIThd-8xq9tBRQpHbxKA-ha8FB8tkpxBcz9vY1JHVPUKJIh_ti7Xhxoecd4Nr4S_Zq5W5jsLhWwL7WDWiWvETdQUXQyTUWJ5Hiegb_VyoV19KpGWTw-ZCACeDJRtF_RWs8IN1PwM"
+                            />
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container rounded-full mix-blend-multiply opacity-20 blur-3xl"
+                        ></div>
+                    </div>
+                </div>
+            </section>
+            <!-- The Beans (Asymmetric Grid) -->
+            <section
+                class="bg-surface-container-low py-24 relative overflow-hidden"
+                id="beans"
+            >
+                <div class="max-w-7xl mx-auto px-8 relative z-10">
+                    <div class="mb-16">
+                        <span
+                            class="label-sm uppercase tracking-[0.2em] text-secondary/60 font-bold"
+                            >The Archive Selection</span
+                        >
+                        <h2 class="font-headline text-4xl text-primary mt-2">
+                            Terroir &amp; Origin
+                        </h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <!-- Philippine Cultivars -->
+                        <div
+                            class="bg-surface-container-lowest p-10 rounded-xl space-y-6"
+                        >
+                            <div class="flex items-center space-x-4">
+                                <span
+                                    class="material-symbols-outlined text-primary text-3xl"
+                                    >forest</span
+                                >
+                                <h3
+                                    class="font-headline text-2xl text-secondary"
+                                >
+                                    Philippine Cultivars
+                                </h3>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4
+                                        class="font-bold text-primary tracking-tight"
+                                    >
+                                        Kapeng Barako
+                                    </h4>
+                                    <p class="text-secondary/80 text-sm mt-1">
+                                        Liberica from Batangas. Bold, pungent,
+                                        with distinct floral and fruity notes.
+                                    </p>
+                                    <div class="flex gap-2 mt-2">
+                                        <span
+                                            class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-sm"
+                                            >High Elevation</span
+                                        >
+                                        <span
+                                            class="px-2 py-1 bg-secondary-container text-on-secondary-container text-[10px] uppercase font-bold tracking-widest rounded-sm"
+                                            >Nutty</span
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="pt-4 border-t border-outline-variant/20"
+                                >
+                                    <h4
+                                        class="font-bold text-primary tracking-tight"
+                                    >
+                                        Mindanao Robusta
+                                    </h4>
+                                    <p class="text-secondary/80 text-sm mt-1">
+                                        Grown in the volcanic soil of Mount Apo.
+                                        Earthy body with hints of dark
+                                        chocolate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- International Classics -->
+                        <div
+                            class="bg-primary text-on-primary p-10 rounded-xl space-y-6 self-center"
+                        >
+                            <div class="flex items-center space-x-4">
+                                <span
+                                    class="material-symbols-outlined text-on-primary text-3xl"
+                                    >public</span
+                                >
+                                <h3 class="font-headline text-2xl">
+                                    International Classics
+                                </h3>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="group">
+                                    <div
+                                        class="flex justify-between items-baseline"
+                                    >
+                                        <h4
+                                            class="font-bold text-primary-fixed tracking-tight"
+                                        >
+                                            Ethiopian Yirgacheffe
+                                        </h4>
+                                        <span class="text-[10px] opacity-70"
+                                            >WASHED</span
+                                        >
+                                    </div>
+                                    <p class="text-on-primary/80 text-sm mt-1">
+                                        Light roast, jasmine tea-like body,
+                                        bright citrus acidity.
+                                    </p>
+                                </div>
+                                <div class="pt-4 border-t border-on-primary/10">
+                                    <div
+                                        class="flex justify-between items-baseline"
+                                    >
+                                        <h4
+                                            class="font-bold text-primary-fixed tracking-tight"
+                                        >
+                                            Colombian Supremo
+                                        </h4>
+                                        <span class="text-[10px] opacity-70"
+                                            >NATURAL</span
+                                        >
+                                    </div>
+                                    <p class="text-on-primary/80 text-sm mt-1">
+                                        Caramel sweetness, balanced body, nutty
+                                        finish.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Menu Section -->
+            <section class="py-24 max-w-4xl mx-auto px-8" id="menu">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline text-4xl text-primary mb-4 italic">
+                        The Daily Journal
+                    </h2>
+                    <p
+                        class="text-secondary uppercase tracking-[0.15em] text-xs font-bold"
+                    >
+                        Updated: Today, 07:00 AM
+                    </p>
+                </div>
+                <div class="space-y-12">
+                    <div class="grid grid-cols-1 gap-8">
+                        <!-- Espresso Row -->
+                        <div
+                            class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group"
+                        >
+                            <div>
+                                <h4
+                                    class="text-xl font-headline text-secondary group-hover:text-primary transition-colors"
+                                >
+                                    Espresso
+                                </h4>
+                                <p class="text-sm text-secondary/60 italic">
+                                    Double shot of our seasonal archive blend
+                                </p>
+                            </div>
+                            <span class="text-lg font-medium text-primary"
+                                >₱120</span
+                            >
+                        </div>
+                        <!-- Americano Row -->
+                        <div
+                            class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group"
+                        >
+                            <div>
+                                <h4
+                                    class="text-xl font-headline text-secondary group-hover:text-primary transition-colors"
+                                >
+                                    Americano
+                                </h4>
+                                <p class="text-sm text-secondary/60 italic">
+                                    Hot or Iced, long-black style
+                                </p>
+                            </div>
+                            <span class="text-lg font-medium text-primary"
+                                >₱140</span
+                            >
+                        </div>
+                        <!-- Latte Row -->
+                        <div
+                            class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group"
+                        >
+                            <div>
+                                <h4
+                                    class="text-xl font-headline text-secondary group-hover:text-primary transition-colors"
+                                >
+                                    Latte
+                                </h4>
+                                <p class="text-sm text-secondary/60 italic">
+                                    Steamed silk milk with a velvet finish
+                                </p>
+                            </div>
+                            <span class="text-lg font-medium text-primary"
+                                >₱165</span
+                            >
+                        </div>
+                        <!-- Cortado Row -->
+                        <div
+                            class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group"
+                        >
+                            <div>
+                                <h4
+                                    class="text-xl font-headline text-secondary group-hover:text-primary transition-colors"
+                                >
+                                    Cortado
+                                </h4>
+                                <p class="text-sm text-secondary/60 italic">
+                                    Equal parts espresso and warm milk
+                                </p>
+                            </div>
+                            <span class="text-lg font-medium text-primary"
+                                >₱150</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Gallery (Instax Style) -->
+            <section class="bg-surface-container py-24 overflow-hidden">
+                <div class="max-w-7xl mx-auto px-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div
+                            class="instax-border bg-white -rotate-3 transition-transform hover:rotate-0 hover:z-10 cursor-pointer"
+                        >
+                            <img
+                                class="w-full aspect-square object-cover"
+                                data-alt="close-up of a barista hand pouring a swan latte art pattern into a ceramic cup"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIRk_JjME2y1bbgCL61sztBexLTrhJLfb0x511ecEWPG1wWqaHOz2IBuXum38uM_q7YYJqfrPokj0GoVlAMKzP9gOTSV8v8N9QqlALusn_MTuA9NWSklDJBdPqvssXpfkUYiBm2T17KTJv7BLhoJQ3AVBJb4UmtfhtuzTeBJQCR-SLhsFkCpr2xZMcHGUmJL9U33Q7AR6lbfNabB0H6Ny0vYZR9lL9_cFjvntJzdprgec-XkATGuOpD65xcNGdBvhjNjU7enbW5EI"
+                            />
+                        </div>
+                        <div
+                            class="instax-border bg-white rotate-2 md:mt-12 transition-transform hover:rotate-0 hover:z-10 cursor-pointer"
+                        >
+                            <img
+                                class="w-full aspect-square object-cover"
+                                data-alt="interior view of a moody coffee shop with dark wood tables, green plants, and vintage hanging lights"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGLAOB3lCw63UXWgdkdnKBeUHutmthuHrfN8sGWl9i5dPBJxc_1y-x22KbHzikGVu0CwPhgnrNVgyuNiUwzKg0jT10Zg9kTEdItp948aU2NwW8cQkQ8QrEh4dxVvXmqAMMhq4iDTiVkIQgpHxJSqafoNQHhrjA2rnLWxPGEnACUFwFsIptGZIJLkkY_fEsccZML0heNr6y5ADydbMxESZ_hAhAplozB6gupYhkJJm7fWBbajK1KbYkihcUA8WUH4zW5d6FnhkApVc"
+                            />
+                        </div>
+                        <div
+                            class="instax-border bg-white -rotate-1 transition-transform hover:rotate-0 hover:z-10 cursor-pointer"
+                        >
+                            <img
+                                class="w-full aspect-square object-cover"
+                                data-alt="close up of roasted coffee beans in a burlap sack with a hand stamped vintage label"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkw6nwf8IIsoDmBAmv1eAyIqFSa8ea79oVguTXpAboM8soJTGRXG2dbyBFrAhHc6G2KUz02x8JkvtmZgn24SqdLGOcPEXHyR1spw6G-VGw8qAG2SOSuQHZvqE4H8Myd0Xv22oc1Si8j0db-8F2qvLAuUm9ZMNoTyuoGHFbMxZ0yLbK09c8Clx_46EFsX7Ba7XP6EocU4864kqcxU_uUdjsu1_yUtf5l1CHGiV3LeewEktXhyLUjV1295n2N0bMfBS33zsBU-HnTSQ"
+                            />
+                        </div>
+                        <div
+                            class="instax-border bg-white rotate-6 md:mt-8 transition-transform hover:rotate-0 hover:z-10 cursor-pointer"
+                        >
+                            <img
+                                class="w-full aspect-square object-cover"
+                                data-alt="steam rising from a glass chemex coffee maker on a rustic wooden table with morning light"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIXcRziqTse8T6HzHifwmeRS_EYZlCvzVoXHvowrzOjKQFWx655iC98-YqRY0gL4uoJkmLPO97lXgYyGRieUD-fk34_3L-ePcnmLDHBeOdNRIA1AML8OLQBmUqSpE9KrUvl5OYaOIEwI1OTZjDTcXb4DIpW9IT3m6AYh02_H3itFbFruNWtq3r6qZcjaMmFdM1CjFRgzGnmC1wNmEfBrq6JejqkasKwPxB8dh2C_DVl7s1fQ7JE4ESrOejbsYnFpehj9FkNEI_lgQ"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Community (Postcard) -->
+            <section class="py-24 max-w-7xl mx-auto px-8" id="visit">
+                <div class="bg-[#f0ece6] p-1 md:p-12 rounded-lg shadow-sm">
+                    <div
+                        class="bg-white p-8 md:p-16 rounded shadow-inner border border-stone-200 relative"
+                    >
+                        <!-- Postcard Divider -->
+                        <div
+                            class="hidden md:block absolute left-1/2 top-16 bottom-16 w-[1px] bg-stone-300"
+                        ></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                            <div class="space-y-6">
+                                <span
+                                    class="font-serif italic text-primary text-xl"
+                                    >Letter from the Roaster</span
+                                >
+                                <p
+                                    class="font-headline text-lg leading-relaxed text-secondary/90"
+                                >
+                                    "Coffee is more than a caffeine delivery
+                                    system. It is a biological record of a
+                                    specific hillside, in a specific season,
+                                    tended by a specific hand. Our goal at the
+                                    Archive is simply to not get in the way of
+                                    that story. We roast light to preserve the
+                                    fruit, the soil, and the rain."
+                                </p>
+                                <p
+                                    class="font-serif italic text-right md:text-left"
+                                >
+                                    — Elias Thorne, Head Curator
+                                </p>
+                            </div>
+                            <div class="md:pl-12 flex flex-col justify-between">
+                                <div class="flex justify-end mb-8">
+                                    <div
+                                        class="w-24 h-32 border-2 border-primary/20 flex items-center justify-center p-2"
+                                    >
+                                        <div
+                                            class="w-full h-full border border-primary/10 flex flex-col items-center justify-center"
+                                        >
+                                            <span
+                                                class="material-symbols-outlined text-primary/40"
+                                                >coffee</span
+                                            >
+                                            <span
+                                                class="text-[8px] text-primary/40 mt-1"
+                                                >POSTAGE</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="border-b border-stone-300 pb-2">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-stone-400"
+                                            >Recipient</span
+                                        >
+                                        <p class="text-primary font-medium">
+                                            The Curious Coffee Lover
+                                        </p>
+                                    </div>
+                                    <div class="border-b border-stone-300 pb-2">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-stone-400"
+                                            >Address</span
+                                        >
+                                        <p class="text-primary font-medium">
+                                            123 Bean Street, Heritage Quarter
+                                        </p>
+                                    </div>
+                                    <div class="border-b border-stone-300 pb-2">
+                                        <span
+                                            class="text-xs uppercase tracking-widest text-stone-400"
+                                            >Origin</span
+                                        >
+                                        <p class="text-primary font-medium">
+                                            Seattle, WA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-[#FAF9F6] border-t border-stone-200/20">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full space-y-4 md:space-y-0 max-w-7xl mx-auto"
+            >
+                <div>
+                    <span class="font-serif text-xl text-[#33450D]"
+                        >Artisanal Archive</span
+                    >
+                    <p
+                        class="font-sans uppercase tracking-[0.1em] text-[10px] text-[#6D5A50] mt-2 opacity-70"
+                    >
+                        © 2024 The Artisanal Archive. Handcrafted in Seattle.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <span
+                        class="font-sans uppercase tracking-[0.1em] text-[10px] text-[#6D5A50] hover:opacity-100 transition-opacity cursor-default"
+                        >Hours: 7am - 4pm</span
+                    >
+                    <span
+                        class="font-sans uppercase tracking-[0.1em] text-[10px] text-[#6D5A50] hover:opacity-100 transition-opacity cursor-default"
+                        >123 Bean Street</span
+                    >
+                    <a
+                        class="font-sans uppercase tracking-[0.1em] text-[10px] text-[#6D5A50] hover:opacity-100 transition-opacity"
+                        href="#"
+                        >Privacy Policy</a
+                    >
+                </div>
+                <div class="flex space-x-6">
+                    <a
+                        class="text-secondary hover:text-primary transition-colors"
+                        href="#"
+                        ><span class="material-symbols-outlined"
+                            >camera</span
+                        ></a
+                    >
+                    <a
+                        class="text-secondary hover:text-primary transition-colors"
+                        href="#"
+                        ><span class="material-symbols-outlined"
+                            >alternate_email</span
+                        ></a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
