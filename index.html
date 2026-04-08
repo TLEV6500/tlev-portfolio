@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TLEV | Architect of Systems & Interfaces</title>
+        <!-- Bootstrap 5.3.3 CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./index.css" />
+        <!-- Lucide Icons (via CDN for vanilla) -->
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <!-- Favicon -->
+        <link rel="icon" href="./images/tlev-logo.png" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-brutal fixed-top px-4 py-3">
+            <div class="container-fluid">
+                <a
+                    class="navbar-brand text-white font-display fw-bold tracking-tighter fs-2"
+                    href="#"
+                >
+                    <div class="logo-container d-inline-block">
+                        <img src="./images/tlev-logo.png" alt="Logo" />
+                    </div>
+                    <h1 class="text-light d-inline-block">TLEV</h1>
+                </a>
+                <button
+                    class="navbar-toggler border-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-center"
+                    id="navbarNav"
+                >
+                    <ul class="navbar-nav gap-lg-4">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-brutal" href="#work"
+                                >Work</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-brutal" href="#about"
+                                >About</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-brutal" href="#skills"
+                                >Skills</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-brutal" href="#contact"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <button
+                    class="btn btn-primary-brutal d-none d-md-block px-4 py-2 fs-6"
+                >
+                    Connect
+                </button>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section | #landing -->
+            <section
+                id="landing"
+                class="min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5 px-4 px-md-5"
+            >
+                <div
+                    class="position-absolute inset-0 grid-pattern opacity-50 w-100 h-100"
+                ></div>
+                <div class="container-fluid mt-5">
+                    <div class="row align-items-center gy-5">
+                        <div class="col-lg-8">
+                            <span
+                                class="text-small d-inline-block px-3 py-1 bg-surface-high text-primary font-display fw-bold tracking-widest text-uppercase mb-4"
+                            >
+                                Software Architect & Designer
+                            </span>
+                            <h1
+                                class="display-1 fw-bold mb-4 tracking-tighter lh-1"
+                            >
+                                I build bridges between <br />
+                                <span class="text-primary fst-italic"
+                                    >complex systems</span
+                                >
+                                <br />
+                                and beautiful interfaces.
+                            </h1>
+                            <p
+                                class="text-on-surface-variant fs-4 fw-light mb-5 max-w-2xl lh-base"
+                                style="max-width: 700px"
+                            >
+                                I’m a Computer Science student and lifelong
+                                learner based in the Philippines. From
+                                architecting collaborative IDEs to brewing the
+                                perfect Moka pot, I am obsessed with the craft
+                                of building systems that are as robust as they
+                                are visually compelling.
+                            </p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <button
+                                    class="btn btn-primary-brutal px-5 py-3 fs-6"
+                                >
+                                    View My Work
+                                </button>
+                                <button
+                                    class="btn btn-outline-brutal px-5 py-3 fs-6"
+                                >
+                                    Read My Resume
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center">
+                            <div
+                                class="portrait-container w-100"
+                                style="max-width: 400px"
+                            >
+                                <div class="portrait-corner-tr"></div>
+                                <div class="portrait-corner-bl"></div>
+                                <div class="bg-surface-low overflow-hidden">
+                                    <img
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSkCWgCjdephZeaSlLosi8q5C8CsVtZ9_4QJV6WgYKsw95WvNOxbIkPg_DDU4rXKPzK6wfhofOc1XDg5a4rwvOQ4L1JFmiv-1HOnizM7FOHHF0n5udoKTxj3hO0g4ZJmtOqzhSURKQSSIUsDpw75_aR0Dqdor-7ts0YZ_zdfAn2UfBWExQuIFfWWja_R1I-0Tw_QJ7h0Tr5TkwWjtLZ3tbm-tx2HKF0gXBDd35-0Ktisqb6gHEPTGX847DvYPSttKF2jZsx0hyvA"
+                                        alt="Tim Leobert E. Villacin"
+                                        class="img-fluid w-100 grayscale brightness-90 contrast-125 transition-all duration-700 hover-color"
+                                        referrerpolicy="no-referrer"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-5 px-4 px-md-5 bg-surface-low">
+                <div class="container-fluid">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-end mb-5 gap-4"
+                    >
+                        <div>
+                            <span
+                                class="font-display text-primary fw-bold tracking-widest text-uppercase d-block mb-3"
+                                style="
+                                    font-size: 0.65rem;
+                                    letter-spacing: 0.4em;
+                                "
+                            >
+                                Portfolio Selected Works
+                            </span>
+                            <h2 class="display-4 fw-bold tracking-tighter">
+                                Here’s what I’m building...
+                            </h2>
+                        </div>
+                        <a
+                            href="#"
+                            class="text-decoration-none text-primary font-display fw-bold text-uppercase tracking-widest fs-6 d-flex align-items-center gap-2 group"
+                        >
+                            View all projects
+                            <i
+                                data-lucide="arrow-right"
+                                class="w-4 h-4 transition-transform"
+                            ></i>
+                        </a>
+                    </div>
+
+                    <div class="row g-5">
+                        <!-- Project 1 -->
+                        <div class="col-md-6">
+                            <div class="project-card p-0">
+                                <div
+                                    class="project-img-container position-relative"
+                                >
+                                    <img
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX6m5WHrNUHemSZhPlKHTZ3uVMGc4DlRS2C6qpXRo7yJHgbLodstWAG7XBURzPcBna4BwVBR1Fy60QR1mKyp1WE2U0CaCEr_M69wLh1VCKdvfQUTFNyUyNcN_ocoj3KM-rKC_Y3NaCIaJ8U53BGM8oUav8D6U-Yki7Lkk0DpMWMEFslHi8U7og5mwbqkCSaVoI030bxb8SEaegQkaaOPxrGFiZrt9HJJHEVZJu4y3wMquu_cGk7jAnCiWKOb6N3zGr0L8v_pfARA"
+                                        alt="Visual Node Editor"
+                                        class="project-img"
+                                        referrerpolicy="no-referrer"
+                                    />
+                                    <div
+                                        class="position-absolute top-0 end-0 p-4 d-flex gap-2"
+                                    >
+                                        <span class="tag">TS</span>
+                                        <span class="tag">D3.js</span>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3
+                                        class="fs-2 mb-3 d-flex justify-content-between align-items-center"
+                                    >
+                                        Visual Node Editor
+                                        <i
+                                            data-lucide="external-link"
+                                            class="text-primary opacity-0 transition-opacity"
+                                        ></i>
+                                    </h3>
+                                    <p
+                                        class="text-on-surface-variant fs-5 mb-4"
+                                    >
+                                        A highly modular canvas-based editor for
+                                        logic flow orchestration. Built with
+                                        precision for developers who need visual
+                                        feedback on complex data structures.
+                                    </p>
+                                    <div
+                                        class="d-flex gap-4 text-uppercase fw-bold text-on-surface-variant tracking-widest"
+                                        style="font-size: 0.65rem"
+                                    >
+                                        <span>Systems Architecture</span>
+                                        <span>UI/UX Engineering</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 2 -->
+                        <div class="col-md-6">
+                            <div class="project-card p-0">
+                                <div
+                                    class="project-img-container position-relative"
+                                >
+                                    <img
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pLH2QvJj6smjRJ8sJ8ReeBTd9Uf3YC05czTIzGNqRDNLEFOkOvkJX7P7Zlyrw7TtDrjpXMtfrmhOeN3PmtI9jTKQ9jfvsWRf7j0GF5e6ythzxnhgUjcRRIFZ3apLwlxfcNAvpGjGUWxoGfvH8dHUOM3t8nkYvvE1HEeXuuAxaSbj036xwMKvMLGrgud8Xm0GxssyIMj8RfCYURD_OSWZkeZVjWcFvFvedIMjNe7TAMTjJygG0tBbL4KBztT5ihiNLV_vJcWXGw"
+                                        alt="TLEV-IDE Engine"
+                                        class="project-img"
+                                        referrerpolicy="no-referrer"
+                                    />
+                                    <div
+                                        class="position-absolute top-0 end-0 p-4 d-flex gap-2"
+                                    >
+                                        <span class="tag">Rust</span>
+                                        <span class="tag">Wasm</span>
+                                    </div>
+                                </div>
+                                <div class="p-4">
+                                    <h3
+                                        class="fs-2 mb-3 d-flex justify-content-between align-items-center"
+                                    >
+                                        TLEV-IDE Engine
+                                        <i
+                                            data-lucide="external-link"
+                                            class="text-primary opacity-0 transition-opacity"
+                                        ></i>
+                                    </h3>
+                                    <p
+                                        class="text-on-surface-variant fs-5 mb-4"
+                                    >
+                                        A high-performance text manipulation
+                                        engine built for the web. Optimized for
+                                        low-latency collaborative editing and
+                                        extreme scalability.
+                                    </p>
+                                    <div
+                                        class="d-flex gap-4 text-uppercase fw-bold text-on-surface-variant tracking-widest"
+                                        style="font-size: 0.65rem"
+                                    >
+                                        <span>Compiler Design</span>
+                                        <span>Performance Ops</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section | #tools -->
+            <section id="tools" class="py-5 px-4 px-md-5">
+                <div class="container-fluid">
+                    <div class="row g-5">
+                        <div class="col-lg-4">
+                            <span
+                                class="font-display text-primary fw-bold tracking-widest text-uppercase d-block mb-3"
+                                style="
+                                    font-size: 0.65rem;
+                                    letter-spacing: 0.4em;
+                                "
+                            >
+                                Personal Log
+                            </span>
+                            <h2 class="display-5 fw-bold mb-4 tracking-tighter">
+                                A life-long learner.
+                            </h2>
+                            <p class="text-on-surface-variant fs-5 mb-5">
+                                My philosophy is simple: master the foundations,
+                                then break the rules. I treat my development
+                                environment and my coffee bar with the same
+                                level of obsessive engineering.
+                            </p>
+                            <div class="d-flex gap-4">
+                                <i
+                                    data-lucide="terminal"
+                                    class="text-primary cursor-pointer"
+                                ></i>
+                                <i
+                                    data-lucide="coffee"
+                                    class="text-primary cursor-pointer"
+                                ></i>
+                                <i
+                                    data-lucide="layout"
+                                    class="text-primary cursor-pointer"
+                                ></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="row g-4 justify-content-end">
+                                <div class="col-md-6">
+                                    <div
+                                        class="about-card h-100 d-flex flex-column justify-content-between gap-1"
+                                    >
+                                        <div class="icon-container">
+                                            <i data-lucide="book-open"></i>
+                                        </div>
+                                        <h4
+                                            class="text-uppercase tracking-widest fs-5"
+                                        >
+                                            Current Learning Tools
+                                        </h4>
+                                        <span class="logo-container">
+                                            <img
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Calibre_logo_SVG_version.svg/250px-Calibre_logo_SVG_version.svg.png"
+                                                alt="calibre logo"
+                                                title="Calibre E-Book Management Software"
+                                            />
+                                            <img
+                                                src="https://cdn.brandfetch.io/idmp1jw9T-/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B"
+                                                alt="affine logo"
+                                                title="AFFiNE Knowledge Management Software"
+                                            />
+                                            <img
+                                                src="./images/notebooklm-logo.svg"
+                                                alt="notebooklm logo"
+                                                title="NotebookLM AI Notebook"
+                                            />
+                                            <img
+                                                src="./images/obsidian-logo.png"
+                                                alt="obsidian logo"
+                                                title="Obsidian Bi-Directional Markdown Notes"
+                                            />
+                                        </span>
+                                        <p
+                                            class="text-on-surface-variant small mb-0"
+                                        >
+                                            Used to learn much about music,
+                                            math, learning, and computer
+                                            science.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-card h-100">
+                                        <div class="icon-container">
+                                            <i data-lucide="coffee"></i>
+                                        </div>
+                                        <h4
+                                            class="text-uppercase tracking-widest fs-5 mb-3"
+                                        >
+                                            Current Obsession
+                                        </h4>
+                                        <p
+                                            class="text-on-surface-variant small mb-0"
+                                        >
+                                            Moka pot coffee: Dialing in the
+                                            perfect extraction for light-roast
+                                            beans.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-card h-100">
+                                        <div class="icon-container">
+                                            <i data-lucide="rocket"></i>
+                                        </div>
+                                        <h4
+                                            class="text-uppercase tracking-widest fs-5 mb-3"
+                                        >
+                                            Next Milestones
+                                        </h4>
+                                        <p
+                                            class="text-on-surface-variant small mb-0"
+                                        >
+                                            Contributing to core low-level
+                                            graphics libraries in the Rust
+                                            ecosystem.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="about-card h-100">
+                                        <div class="icon-container">
+                                            <i data-lucide="wrench"></i>
+                                        </div>
+                                        <h4
+                                            class="text-uppercase tracking-widest fs-5 mb-3"
+                                        >
+                                            Current Dev Tools
+                                        </h4>
+                                        <p
+                                            class="text-on-surface-variant small mb-0"
+                                        >
+                                            Contributing to core low-level
+                                            graphics libraries in the Rust
+                                            ecosystem.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="connect-card">
+                                        <h4
+                                            class="display-6 fw-bold text-uppercase tracking-widest mb-4"
+                                        >
+                                            Connect <br />
+                                            Digitally
+                                        </h4>
+                                        <div class="d-flex flex-column gap-3">
+                                            <a href="#" class="connect-link"
+                                                >Github
+                                                <i
+                                                    data-lucide="arrow-up-right"
+                                                    class="w-4 h-4"
+                                                ></i
+                                            ></a>
+                                            <a href="#" class="connect-link"
+                                                >LinkedIn
+                                                <i
+                                                    data-lucide="arrow-up-right"
+                                                    class="w-4 h-4"
+                                                ></i
+                                            ></a>
+                                            <a href="#" class="connect-link"
+                                                >Twitter
+                                                <i
+                                                    data-lucide="arrow-up-right"
+                                                    class="w-4 h-4"
+                                                ></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section
+                id="contact"
+                class="py-5 px-4 px-md-5 bg-surface-high position-relative overflow-hidden"
+            >
+                <div class="bg-text-tlev">TLEV</div>
+                <div class="container-fluid position-relative z-1">
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <h2
+                                class="display-2 fw-bold mb-5 tracking-tighter lh-1"
+                            >
+                                Let’s build something <br />
+                                <span class="text-primary">well-crafted.</span>
+                            </h2>
+
+                            <div class="d-flex align-items-center gap-4 mb-5">
+                                <div
+                                    class="bg-surface-low border border-outline-variant overflow-hidden"
+                                    style="width: 80px; height: 80px"
+                                >
+                                    <img
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV4kfN_ztXCZWY2HmPfDYXRlI2gI--ooEpPKpRWbgiJqixzQpiyjQYLy9fL0ZPTflZ5fodCYRpl2NZu57kdxnd5zwTDM2MJKJsXhhlDwJ8jn9Vi42ySCAVd_v9rsKdis77gfIzgY31udHGx9gkWtyssnPZvYbjewE5BP5Ylds7q6G70klbCJDhsUf6fuSKqg35_0uu7JIIO_L3Kddzi1cadbR3OELGBG_-K-bfTZXoj5ObL3nOAXiimd9WKxCiABkgWxqiiQDppQ"
+                                        alt="Tim Profile"
+                                        class="img-fluid w-100 grayscale"
+                                        referrerpolicy="no-referrer"
+                                    />
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-display fw-bold text-uppercase tracking-widest mb-1"
+                                        style="font-size: 0.75rem"
+                                    >
+                                        Tim Leobert E. Villacin
+                                    </p>
+                                    <p
+                                        class="text-on-surface-variant text-uppercase tracking-widest"
+                                        style="font-size: 0.6rem"
+                                    >
+                                        Philippines, Earth (UTC +8)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row gy-5">
+                                <div class="col-12">
+                                    <p class="form-label-brutal mb-2">
+                                        Electronic Mail
+                                    </p>
+                                    <p
+                                        class="display-6 fw-bold text-primary mb-0"
+                                    >
+                                        tim@tlev.dev
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="form-label-brutal mb-2">
+                                        Version Control
+                                    </p>
+                                    <p class="fs-4 fw-medium mb-0">
+                                        github/tlev-arch
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="form-label-brutal mb-2">
+                                        Network
+                                    </p>
+                                    <p class="fs-4 fw-medium mb-0">
+                                        linkedin/in/tlevillacin
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="contact-form-container">
+                                <form action="#" onsubmit="return false;">
+                                    <div class="mb-5">
+                                        <label class="form-label-brutal"
+                                            >What is your name?</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control form-control-brutal"
+                                            placeholder="Identity name"
+                                        />
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="form-label-brutal"
+                                            >Digital Address</label
+                                        >
+                                        <input
+                                            type="email"
+                                            class="form-control form-control-brutal"
+                                            placeholder="email@domain.com"
+                                        />
+                                    </div>
+                                    <div class="mb-5">
+                                        <label class="form-label-brutal"
+                                            >The Mission Scope</label
+                                        >
+                                        <textarea
+                                            class="form-control form-control-brutal"
+                                            rows="4"
+                                            placeholder="Tell me about your project or inquiry..."
+                                        ></textarea>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary-brutal w-100 py-4 fs-5 d-flex align-items-center justify-content-center gap-3"
+                                    >
+                                        Send Transmission
+                                        <i
+                                            data-lucide="send"
+                                            class="w-5 h-5"
+                                        ></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer-brutal px-4 px-md-5">
+            <div class="container-fluid">
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-4"
+                >
+                    <div class="fs-4 fw-bold font-display tracking-tighter">
+                        TLEV ARCHITECT.
+                    </div>
+                    <div
+                        class="text-on-surface-variant text-uppercase tracking-widest text-center"
+                        style="font-size: 0.65rem; letter-spacing: 0.3em"
+                    >
+                        © 2026 TLEV ARCHITECT. ALL RIGHTS RESERVED.
+                    </div>
+                    <div class="d-flex gap-4">
+                        <a
+                            href="#"
+                            class="text-on-surface-variant text-decoration-none hover-primary"
+                            ><i data-lucide="github" class="w-5 h-5"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="text-on-surface-variant text-decoration-none hover-primary"
+                            ><i data-lucide="linkedin" class="w-5 h-5"></i
+                        ></a>
+                        <a
+                            href="#"
+                            class="text-on-surface-variant text-decoration-none hover-primary"
+                            ><i data-lucide="twitter" class="w-5 h-5"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Initialize Lucide Icons -->
+        <script>
+            lucide.createIcons();
+        </script>
+    </body>
+</html>
