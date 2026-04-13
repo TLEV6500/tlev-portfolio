@@ -407,6 +407,39 @@ h1 {
     font-size: 16px !important;
 }
 
+.max-w-700 {
+    max-width: 700px;
+}
+
+.max-w-400 {
+    max-width: 400px;
+}
+
+.square-80px {
+    width: 80px;
+    height: 80px;
+}
+
+.text-60crem {
+    font-size: 0.6rem;
+}
+
+.text-65crem {
+    font-size: 0.65rem;
+}
+
+.text-75crem {
+    font-size: 0.75rem;
+}
+
+.ls-40crem {
+    letter-spacing: 0.4rem;
+}
+
+.ls-30cem {
+    letter-spacing: 0.3em;
+}
+
 @media screen and (max-width: 992px) {
     .project-card .description-large {
         display: none;
