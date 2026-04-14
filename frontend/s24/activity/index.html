@@ -1,9 +1,723 @@
 <!doctype html>
-<html lang="en">
+
+<html class="dark" lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TLEV Dev</title>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>TLEV | Tim Leobert E. Villacin</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./index.css" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "surface-container-highest": "#192540",
+                            "on-surface-variant": "#a3aac4",
+                            "surface-tint": "#ba9eff",
+                            "tertiary-fixed": "#ff8bc5",
+                            "on-tertiary": "#5f003e",
+                            "primary-fixed": "#ae8dff",
+                            "inverse-surface": "#faf8ff",
+                            "secondary-container": "#006b5f",
+                            "surface-dim": "#060e20",
+                            "on-surface": "#dee5ff",
+                            "on-secondary": "#005c52",
+                            "primary-dim": "#8455ef",
+                            "error-container": "#a70138",
+                            background: "#060e20",
+                            "surface-variant": "#192540",
+                            "on-secondary-container": "#dcfff7",
+                            "tertiary-fixed-dim": "#f976ba",
+                            "on-error-container": "#ffb2b9",
+                            outline: "#6d758c",
+                            "surface-container-high": "#141f38",
+                            primary: "#ba9eff",
+                            "primary-fixed-dim": "#a27cff",
+                            "secondary-fixed-dim": "#50ebd5",
+                            "on-error": "#490013",
+                            "on-primary-container": "#2b006e",
+                            "outline-variant": "#40485d",
+                            surface: "#060e20",
+                            "on-primary-fixed-variant": "#370086",
+                            "secondary-fixed": "#62fae3",
+                            "on-primary": "#39008c",
+                            tertiary: "#ff86c3",
+                            "surface-container-lowest": "#000000",
+                            "on-background": "#dee5ff",
+                            "on-secondary-fixed": "#004840",
+                            "on-secondary-fixed-variant": "#00675c",
+                            "on-primary-fixed": "#000000",
+                            "inverse-on-surface": "#4d556b",
+                            secondary: "#62fae3",
+                            "tertiary-dim": "#f271b5",
+                            "secondary-dim": "#50ebd5",
+                            "on-tertiary-fixed-variant": "#73004b",
+                            "surface-container": "#0f1930",
+                            "primary-container": "#ae8dff",
+                            "surface-container-low": "#091328",
+                            error: "#ff6e84",
+                            "error-dim": "#d73357",
+                            "on-tertiary-container": "#4a002f",
+                            "tertiary-container": "#f673b7",
+                            "on-tertiary-fixed": "#360021",
+                            "surface-bright": "#1f2b49",
+                            "inverse-primary": "#6e3bd7",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.125rem",
+                            lg: "0.25rem",
+                            xl: "0.5rem",
+                            full: "0.75rem",
+                        },
+                        fontFamily: {
+                            headline: ["Space Grotesk"],
+                            body: ["Inter"],
+                            label: ["Space Grotesk"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <script src="./index.js" defer></script>
     </head>
-    <body></body>
+    <body class="bg-surface-dim selection:bg-primary/30">
+        <div class="noise-overlay"></div>
+        <div class="fixed inset-0 grid-bg pointer-events-none opacity-40"></div>
+
+        <header class="fixed top-0 w-full z-50 backdrop-blur-xl header-glass">
+            <nav
+                class="flex justify-between items-center h-16 px-8 max-w-site mx-auto"
+            >
+                <div
+                    class="text-xl font-bold tracking-tighter text-on-surface font-space-grotesk"
+                >
+                    TLEV
+                </div>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a
+                        class="text-accent border-b-2 border-accent pb-1 font-space-grotesk text-micro tracking-widest uppercase"
+                        href="#home"
+                        >Home</a
+                    >
+                    <a
+                        class="text-on-surface/70 hover:text-on-surface transition-colors font-space-grotesk text-micro tracking-widest uppercase"
+                        href="#projects"
+                        >Projects</a
+                    >
+                    <a
+                        class="text-on-surface/70 hover:text-on-surface transition-colors font-space-grotesk text-micro tracking-widest uppercase"
+                        href="#tools"
+                        >Tools</a
+                    >
+                    <a
+                        class="text-on-surface/70 hover:text-on-surface transition-colors font-space-grotesk text-micro tracking-widest uppercase"
+                        href="#contact"
+                        >Contact</a
+                    >
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        id="theme-toggle"
+                        class="material-symbols-outlined text-on-surface/70 hover:text-accent transition-colors"
+                    >
+                        dark_mode
+                    </button>
+                    <button
+                        class="hidden md:block primary-gradient text-on-primary-container px-6 py-2 font-space-grotesk text-micro tracking-widest uppercase font-bold hover-glow-secondary active:scale-95 transition-all duration-200"
+                    >
+                        Get in Touch
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="relative z-10 pt-16">
+            <section
+                class="min-h-hero flex items-center px-8 max-w-site mx-auto"
+                id="home"
+            >
+                <div class="grid lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30"
+                        >
+                            <span
+                                class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+                            ></span>
+                            <span
+                                class="font-space-grotesk text-micro tracking-widest uppercase text-on-surface-variant"
+                            >
+                                Hello, I'm Tim Leobert E. Villacin
+                            </span>
+                        </div>
+                        <h1
+                            class="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.9] text-on-surface"
+                        >
+                            I build bridges between
+                            <span class="text-primary italic"
+                                >complex systems</span
+                            >
+                            and beautiful interfaces.
+                        </h1>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <button
+                                class="primary-gradient px-8 py-4 font-space-grotesk font-bold tracking-widest uppercase text-on-primary hover-glow-primary active:scale-95 transition-all"
+                            >
+                                Initialize Project
+                            </button>
+                            <button
+                                class="px-8 py-4 font-space-grotesk font-bold tracking-widest uppercase border border-outline-variant hover:bg-surface-variant hover:border-primary transition-all active:scale-95"
+                            >
+                                Read Documentation
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative flex justify-center lg:justify-end">
+                        <div class="relative hero-image-wrapper">
+                            <div
+                                class="absolute -inset-4 border border-outline-variant/20 rounded-lg"
+                            ></div>
+                            <div
+                                class="absolute top-0 right-0 p-4 font-space-grotesk text-micro tracking-tighter text-outline opacity-50"
+                            >
+                                COORD: 45.4215° N, 75.6972° W
+                            </div>
+                            <div
+                                class="w-full h-full glass-panel overflow-hidden relative group"
+                            >
+                                <img
+                                    alt="Architect Portrait"
+                                    class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                                    data-alt="Modern professional portrait of a software architect with dramatic cool lighting and subtle geometric shadows in background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDC7n-ud98UdRp1sQDHhwEFDiuBrFCyL4_Pq_rXn7Ial2iJ9Dgg-fWr9I-dUvF7DBaLut6XfR3-dOCdwnmMLOEuJFdUpBqXjs_Nc_f5KJDVVDn73lgIUwhWDhXWv7wrq0352wYkWjfcYHD8pT0VT37qNaOBqDUM3lWajRKjGqIDqMW0rqgOvM1RTDchOiuDQAIw-soh2nxV8KM3eXj3p8EEV-FJrgiXvbKlo2YVvVXTYHL4GZ5fDrIRVNRfQ08ct5Aon2ebCeRvYC9y"
+                                />
+                                <div
+                                    class="absolute inset-0 bg-primary/10 mix-blend-overlay"
+                                ></div>
+                            </div>
+                            <div
+                                class="absolute -bottom-6 -left-6 glass-panel px-6 py-4 space-y-1"
+                            >
+                                <p
+                                    class="font-space-grotesk text-micro tracking-widest text-secondary uppercase"
+                                >
+                                    Current Stack
+                                </p>
+                                <p class="font-bold text-on-surface">
+                                    Rust + WebAssembly
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-24 px-8 max-w-site mx-auto" id="projects">
+                <div
+                    class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
+                >
+                    <div>
+                        <h2
+                            class="font-space-grotesk text-micro tracking-super-wide uppercase text-primary mb-4"
+                        >
+                            Case Studies
+                        </h2>
+                        <h3
+                            class="text-4xl md:text-5xl font-headline font-bold text-on-surface"
+                        >
+                            Selected Works
+                        </h3>
+                    </div>
+                    <p class="text-on-surface-variant max-w-sm font-body">
+                        A curation of high-performance applications focused on
+                        scalability, precision, and architectural integrity.
+                    </p>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                >
+                    <div
+                        class="group hover-lift bg-surface-container-low border border-outline-variant/10 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+                    >
+                        <div class="h-64 overflow-hidden relative">
+                            <img
+                                alt="Project 1"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Cybersecurity data visualization interface with neon purple lines and futuristic glowing nodes on dark background"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4JaL5RkW-a7vWGmK0L5QzLsT5ghH_89aVlfz8aP8cm1NXaPcY9htqAoRkBKvUrxti0_e__JRpsZMCxYLTjvW0QNfpTBYcVVBZrIFootOUd1Ot8N112dmv2DfHuUoyM5uyIK5QxFgIrdZjQQNCSjbK_kT_f0vvGvw9D4sBqezVlUA5wivWOXxlRP2COc8vikKvlOya8gtanLMHdUOs8j6PFFTmPS2VY_HJHfv4dAsJSrTcu3S2sqnDsemHXZfqXVXqiB095lcjShbH"
+                            />
+                            <div
+                                class="absolute top-4 right-4 bg-surface-dim/80 backdrop-blur px-2 py-1 flex items-center gap-2"
+                            >
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-secondary"
+                                ></span>
+                                <span
+                                    class="font-space-grotesk text-nano tracking-widest uppercase"
+                                    >Live System</span
+                                >
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >React</span
+                                >
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >Rust</span
+                                >
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >WASM</span
+                                >
+                            </div>
+                            <h4
+                                class="text-xl font-bold font-headline group-hover:text-primary transition-colors"
+                            >
+                                Neural-Lattice Engine
+                            </h4>
+                            <button
+                                class="w-full py-3 border border-outline-variant/30 hover:bg-primary hover:text-on-primary font-space-grotesk text-micro tracking-widest uppercase font-bold transition-all group-active:scale-95"
+                            >
+                                Details
+                                <span
+                                    class="material-symbols-outlined align-middle ml-1 text-sm"
+                                    >arrow_forward</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="group hover-lift bg-surface-container-low border border-outline-variant/10 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+                    >
+                        <div class="h-64 overflow-hidden relative">
+                            <img
+                                alt="Project 2"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Abstract 3D crystalline structure in deep violet and cyan light representing blockchain connectivity"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnMOOGC-l0AdR91d4SdHPvEhvd1ApD4KOhVvPfPhAVq3Qurs6nKtRlgxqM5G25ryZzkfA7TTN87T4A94Ps63iJLWU1r0xnRWmnNFT337XFR050jSWpmAo0_u5n-3zyCsU5uFkJhpFoxorfPzS4b3oPq_tBT2Trxx0QxDKtPoKhNaMddtvERBOkDYE8kN0XkLOmJSl4pGuhYgIyOSxhXb8yKF9XVlAZZ-YOUbCczrSXN3c0rQDy0A5r0qs3onNnNIzuLTaZKS8PL26o"
+                            />
+                            <div
+                                class="absolute top-4 right-4 bg-surface-dim/80 backdrop-blur px-2 py-1 flex items-center gap-2"
+                            >
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-tertiary"
+                                ></span>
+                                <span
+                                    class="font-space-grotesk text-nano tracking-widest uppercase"
+                                    >Beta</span
+                                >
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >Solidity</span
+                                >
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >Next.js</span
+                                >
+                            </div>
+                            <h4
+                                class="text-xl font-bold font-headline group-hover:text-primary transition-colors"
+                            >
+                                Ethereal Ledger v4
+                            </h4>
+                            <button
+                                class="w-full py-3 border border-outline-variant/30 hover:bg-primary hover:text-on-primary font-space-grotesk text-micro tracking-widest uppercase font-bold transition-all"
+                            >
+                                Details
+                                <span
+                                    class="material-symbols-outlined align-middle ml-1 text-sm"
+                                    >arrow_forward</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="group hover-lift bg-surface-container-low border border-outline-variant/10 hover:border-primary/50 transition-all duration-500 overflow-hidden"
+                    >
+                        <div class="h-64 overflow-hidden relative">
+                            <img
+                                alt="Project 3"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                data-alt="Satellite earth view with illuminated data paths connecting global hubs in deep blue and purple hues"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp1a8WPY7CvAwP64CzJhc-u1m77adyuwMaINDDSKHhGrCuBqJExCBq0_WJ5NNiGxlZD0S5u9y5DI29n-aJT1YvHwqTFeo9gM74EKuI86PkrKVgP9iplfYmwiczx0hlFFj25gyG1vUZbUGWcfwIhp3KWVgomDJS0NKfalig5A3UTjLGY9jKWt8MEHAhoNnJ-ZyVuwgezOFER76BgrfAw6Fo_rLPIt2E4HooHuAyIIXO0MMbgb6ItFCwAP9vIAM-1L9zCwW2TDnfpNrY"
+                            />
+                            <div
+                                class="absolute top-4 right-4 bg-surface-dim/80 backdrop-blur px-2 py-1 flex items-center gap-2"
+                            >
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-outline"
+                                ></span>
+                                <span
+                                    class="font-space-grotesk text-nano tracking-widest uppercase"
+                                    >Archived</span
+                                >
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >Python</span
+                                >
+                                <span
+                                    class="px-2 py-1 bg-surface-container text-micro font-space-grotesk tracking-widest uppercase text-outline"
+                                    >Go</span
+                                >
+                            </div>
+                            <h4
+                                class="text-xl font-bold font-headline group-hover:text-primary transition-colors"
+                            >
+                                Atlas Pipeline
+                            </h4>
+                            <button
+                                class="w-full py-3 border border-outline-variant/30 hover:bg-primary hover:text-on-primary font-space-grotesk text-micro tracking-widest uppercase font-bold transition-all"
+                            >
+                                Details
+                                <span
+                                    class="material-symbols-outlined align-middle ml-1 text-sm"
+                                    >arrow_forward</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="py-24 px-8 max-w-site mx-auto bg-surface-container-low"
+                id="tools"
+            >
+                <div class="mb-16">
+                    <h2
+                        class="font-space-grotesk text-micro tracking-super-wide uppercase text-secondary mb-4"
+                    >
+                        Tech Specs
+                    </h2>
+                    <h3
+                        class="text-4xl md:text-5xl font-headline font-bold text-on-surface"
+                    >
+                        The Arsenal
+                    </h3>
+                </div>
+                <div
+                    class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 auto-rows-bento"
+                >
+                    <div
+                        class="md:col-span-2 lg:col-span-2 row-span-2 bg-surface-container border border-outline-variant/10 p-8 flex flex-col justify-between hover:bg-surface-variant transition-colors group"
+                    >
+                        <span
+                            class="material-symbols-outlined text-primary text-5xl group-hover:scale-110 transition-transform duration-500"
+                            >terminal</span
+                        >
+                        <div>
+                            <h4 class="font-headline font-bold text-2xl mb-2">
+                                System Core
+                            </h4>
+                            <p class="text-on-surface-variant text-sm">
+                                Expertise in low-level systems programming and
+                                high-performance computation.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="md:col-span-2 lg:col-span-2 row-span-1 bg-surface-container border border-outline-variant/10 p-6 flex items-center gap-6 group"
+                    >
+                        <div
+                            class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center"
+                        >
+                            <span class="material-symbols-outlined text-primary"
+                                >data_object</span
+                            >
+                        </div>
+                        <div>
+                            <p
+                                class="font-space-grotesk text-micro tracking-widest text-outline uppercase"
+                            >
+                                Backend
+                            </p>
+                            <h4 class="font-bold">PostgreSQL / Redis</h4>
+                        </div>
+                    </div>
+                    <div
+                        class="md:col-span-2 lg:col-span-2 row-span-1 bg-surface-container border border-outline-variant/10 p-6 flex items-center gap-6 group"
+                    >
+                        <div
+                            class="w-12 h-12 rounded bg-secondary/10 flex items-center justify-center"
+                        >
+                            <span
+                                class="material-symbols-outlined text-secondary"
+                                >cloud_done</span
+                            >
+                        </div>
+                        <div>
+                            <p
+                                class="font-space-grotesk text-micro tracking-widest text-outline uppercase"
+                            >
+                                Cloud
+                            </p>
+                            <h4 class="font-bold">AWS / Kubernetes</h4>
+                        </div>
+                    </div>
+                    <div
+                        class="md:col-span-4 lg:col-span-3 row-span-1 bg-surface-container border border-outline-variant/10 p-6 flex items-center justify-between group"
+                    >
+                        <div class="flex items-center gap-6">
+                            <span
+                                class="material-symbols-outlined text-tertiary"
+                                >psychology</span
+                            >
+                            <div>
+                                <p
+                                    class="font-space-grotesk text-micro tracking-widest text-outline uppercase"
+                                >
+                                    Deep Learning
+                                </p>
+                                <h4 class="font-bold text-lg">
+                                    Pytorch & TensorFlow
+                                </h4>
+                            </div>
+                        </div>
+                        <div
+                            class="h-1 w-24 bg-outline-variant overflow-hidden"
+                        >
+                            <div class="h-full bg-tertiary w-3/4"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="md:col-span-2 lg:col-span-1 row-span-1 bg-primary text-on-primary-container p-6 flex flex-col justify-center items-center"
+                    >
+                        <span class="text-4xl font-headline font-bold"
+                            >08+</span
+                        >
+                        <span
+                            class="font-space-grotesk text-nano tracking-widest uppercase font-bold text-center"
+                            >Years Experience</span
+                        >
+                    </div>
+                    <div
+                        class="md:col-span-2 lg:col-span-2 row-span-1 bg-surface-container border border-outline-variant/10 p-6 flex items-center gap-6"
+                    >
+                        <span class="material-symbols-outlined text-primary"
+                            >architecture</span
+                        >
+                        <div>
+                            <p
+                                class="font-space-grotesk text-micro tracking-widest text-outline uppercase"
+                            >
+                                Design
+                            </p>
+                            <h4 class="font-bold">Figma / Framer</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="py-24 px-8 max-w-site mx-auto overflow-hidden relative"
+                id="contact"
+            >
+                <div
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 contact-glow rounded-full"
+                ></div>
+                <div class="grid lg:grid-cols-2 gap-24 relative z-10">
+                    <div class="space-y-12">
+                        <div>
+                            <h2
+                                class="font-space-grotesk text-micro tracking-super-wide uppercase text-primary mb-4"
+                            >
+                                Transmission
+                            </h2>
+                            <h3
+                                class="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-on-surface"
+                            >
+                                Let's build the next generation.
+                            </h3>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-6">
+                                <span
+                                    class="material-symbols-outlined text-primary p-4 border border-outline-variant/20"
+                                    >alternate_email</span
+                                >
+                                <div>
+                                    <h5
+                                        class="font-space-grotesk text-micro tracking-widest text-outline uppercase mb-1"
+                                    >
+                                        Direct Email
+                                    </h5>
+                                    <a
+                                        href="mailto:timleo.vil@gmail.com"
+                                        class="text-xl font-bold hover:text-primary transition-colors flex items-center gap-2 group w-fit"
+                                    >
+                                        timleo.vil@gmail.com
+                                        <span
+                                            class="material-symbols-outlined text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                            >arrow_outward</span
+                                        >
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-6">
+                                <span
+                                    class="material-symbols-outlined text-secondary p-4 border border-outline-variant/20"
+                                    >hub</span
+                                >
+                                <div class="w-full">
+                                    <h5
+                                        class="font-space-grotesk text-micro tracking-widest text-outline uppercase mb-3"
+                                    >
+                                        Network Hub
+                                    </h5>
+                                    <div class="flex flex-col gap-3">
+                                        <a
+                                            href="https://github.com/TLEV6500"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-xl font-bold hover:text-secondary transition-colors flex items-center gap-2 group w-fit"
+                                        >
+                                            Github
+                                            <span
+                                                class="material-symbols-outlined text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                                >arrow_outward</span
+                                            >
+                                        </a>
+                                        <a
+                                            href="https://www.linkedin.com/in/tim-leobert-villacin-2484b0226/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-xl font-bold hover:text-secondary transition-colors flex items-center gap-2 group w-fit"
+                                        >
+                                            LinkedIn
+                                            <span
+                                                class="material-symbols-outlined text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                                >arrow_outward</span
+                                            >
+                                        </a>
+                                        <a
+                                            href="https://x.com/TimLeoVil"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="text-xl font-bold hover:text-secondary transition-colors flex items-center gap-2 group w-fit"
+                                        >
+                                            Twitter
+                                            <span
+                                                class="material-symbols-outlined text-sm opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                                                >arrow_outward</span
+                                            >
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-panel p-10 md:p-12 relative">
+                        <form action="#" class="space-y-8">
+                            <div class="relative group">
+                                <input
+                                    class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors text-on-surface font-body"
+                                    id="name"
+                                    placeholder=" "
+                                    required=""
+                                    type="text"
+                                />
+                                <label
+                                    class="absolute left-0 top-4 text-outline font-space-grotesk text-micro tracking-widest uppercase transition-all peer-focus:-top-4 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4"
+                                    for="name"
+                                    >Operator Identity</label
+                                >
+                            </div>
+                            <div class="relative group">
+                                <input
+                                    class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors text-on-surface font-body"
+                                    id="email"
+                                    placeholder=" "
+                                    required=""
+                                    type="email"
+                                />
+                                <label
+                                    class="absolute left-0 top-4 text-outline font-space-grotesk text-micro tracking-widest uppercase transition-all peer-focus:-top-4 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4"
+                                    for="email"
+                                    >Return Address</label
+                                >
+                            </div>
+                            <div class="relative group">
+                                <textarea
+                                    class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 focus:ring-0 focus:border-primary transition-colors text-on-surface font-body resize-none"
+                                    id="message"
+                                    placeholder=" "
+                                    required=""
+                                    rows="4"
+                                ></textarea>
+                                <label
+                                    class="absolute left-0 top-4 text-outline font-space-grotesk text-micro tracking-widest uppercase transition-all peer-focus:-top-4 peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4"
+                                    for="message"
+                                    >Message Payload</label
+                                >
+                            </div>
+                            <button
+                                class="w-full py-5 primary-gradient font-space-grotesk font-bold tracking-wide-extra uppercase text-on-primary-container hover-glow-primary-lg transition-all flex items-center justify-center gap-4 group"
+                                type="submit"
+                            >
+                                Send Transmission
+                                <span
+                                    class="material-symbols-outlined text-xl group-hover:translate-x-2 transition-transform"
+                                    >rocket_launch</span
+                                >
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="w-full border-t border-accent-light bg-surface-dim">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-site mx-auto gap-4"
+            >
+                <div class="flex flex-col items-center md:items-start gap-2">
+                    <div class="text-sm font-bold text-on-surface">TLEV</div>
+                    <p
+                        class="font-space-grotesk text-micro tracking-widest uppercase text-on-surface/40"
+                    >
+                        © 2026 TLEV. ALL RIGHTS RESERVED.
+                    </p>
+                </div>
+                <div class="flex gap-8">
+                    <a
+                        class="font-space-grotesk text-micro tracking-widest uppercase text-on-surface/40 hover:text-accent transition-colors scale-105 duration-300"
+                        href="#"
+                        >LinkedIn</a
+                    >
+                    <a
+                        class="font-space-grotesk text-micro tracking-widest uppercase text-on-surface/40 hover:text-accent transition-colors scale-105 duration-300"
+                        href="#"
+                        >GitHub</a
+                    >
+                    <a
+                        class="font-space-grotesk text-micro tracking-widest uppercase text-on-surface/40 hover:text-accent transition-colors scale-105 duration-300"
+                        href="#"
+                        >Twitter</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
