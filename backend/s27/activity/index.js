@@ -136,7 +136,7 @@ console.log(getMoviesArray());
 */
 
 function getPrimeNumberArray() {
-    return [1, 3, 5, 7, 11];
+    return [17, 3, 5, 7, 11];
 }
 
 console.log(getPrimeNumberArray());
