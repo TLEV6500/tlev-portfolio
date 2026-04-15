@@ -105,9 +105,8 @@ let newProduct = createProduct("Chocolate Bar", 200, 50);
 console.log(newProduct);
 /* ================= */
 
-function createTeamArr(member1, member2, member2, member3, member4) {
-    let members = [member1, member2, member2, member3, member4];
-
+function createTeamArr(member1, member2, member3, member4, member5) {
+    let members = [member1, member2, member3, member4, member5];
     return members;
 }
 
