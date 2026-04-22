@@ -1,0 +1,23 @@
+[
+    {
+        "_id": "6626f1c5e4b2a3c9e8f11001",
+        "userId": "6626f0b4d4b2a3c9e8f10001",
+        "datetimeCreated": "2026-04-20T14:30:00.000Z",
+        "isPaid": true,
+        "total": 79.99
+    },
+    {
+        "_id": "6626f1c5e4b2a3c9e8f11002",
+        "userId": "6626f0b4d4b2a3c9e8f10002",
+        "datetimeCreated": "2026-04-21T09:15:22.000Z",
+        "isPaid": true,
+        "total": 99.0
+    },
+    {
+        "_id": "6626f1c5e4b2a3c9e8f11003",
+        "userId": "6626f0b4d4b2a3c9e8f10003",
+        "datetimeCreated": "2026-04-22T18:45:10.000Z",
+        "isPaid": false,
+        "total": 249.99
+    }
+]

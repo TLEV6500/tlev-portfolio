@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "6626f3e7a4b2a3c9e8f13001",
+        "orderId": "6626f1c5e4b2a3c9e8f11001",
+        "productId": "6626f2d6f4b2a3c9e8f12001",
+        "quantity": 1,
+        "price": 49.99,
+        "subtotal": 49.99
+    },
+    {
+        "_id": "6626f3e7a4b2a3c9e8f13002",
+        "orderId": "6626f1c5e4b2a3c9e8f11001",
+        "productId": "6626f2d6f4b2a3c9e8f12002",
+        "quantity": 2,
+        "price": 15.0,
+        "subtotal": 30.0
+    },
+    {
+        "_id": "6626f3e7a4b2a3c9e8f13003",
+        "orderId": "6626f1c5e4b2a3c9e8f11002",
+        "productId": "6626f2d6f4b2a3c9e8f12003",
+        "quantity": 1,
+        "price": 99.0,
+        "subtotal": 99.0
+    }
+]

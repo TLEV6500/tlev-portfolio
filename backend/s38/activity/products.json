@@ -1,0 +1,38 @@
+[
+    {
+        "_id": "6626f0b4d4b2a3c9e8f1000a",
+        "name": "Wireless Noise-Canceling Headphones",
+        "description": "Over-ear headphones with active noise cancellation and 30-hour battery life.",
+        "price": 249.99,
+        "stocks": 150,
+        "isActive": true,
+        "sku": "AUDIO-WH-001"
+    },
+    {
+        "_id": "6626f0b4d4b2a3c9e8f1000b",
+        "name": "Ergonomic Office Chair",
+        "description": "Mesh back office chair with adjustable lumbar support and armrests.",
+        "price": 199.5,
+        "stocks": 45,
+        "isActive": true,
+        "sku": "FURN-CH-002"
+    },
+    {
+        "_id": "6626f0b4d4b2a3c9e8f1000c",
+        "name": "Mechanical Gaming Keyboard",
+        "description": "Tenkeyless mechanical keyboard with RGB backlighting and linear switches.",
+        "price": 89.99,
+        "stocks": 0,
+        "isActive": false,
+        "sku": "PERIPH-KB-003"
+    },
+    {
+        "_id": "6626f0b4d4b2a3c9e8f1000d",
+        "name": "4K Ultra HD Monitor",
+        "description": "27-inch IPS display with HDR support and ultra-thin bezels.",
+        "price": 349.0,
+        "stocks": 82,
+        "isActive": true,
+        "sku": "DISP-MN-004"
+    }
+]
