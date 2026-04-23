@@ -114,7 +114,7 @@ async function customerPerRegion(db) {
         {
             $group: {
                 _id: "$region",
-                totalCustomers: { $count: {} },
+                customerCount: { $count: {} },
             },
         },
     ]);
