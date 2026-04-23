@@ -158,7 +158,7 @@ async function replaceOneFunc(db) {
     db.rooms.replaceOne(
         { name: "queen" },
         {
-            name: "queen",
+            name: "family",
             rooms_available: 0,
             isAvailable: false,
         },
