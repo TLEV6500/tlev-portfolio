@@ -170,18 +170,18 @@ async function productPopularity(db) {
                 product: 1,
                 quantity: 1,
                 formattedDate: {
-                    $dateToString: { format: "%Y-%m-%d", date: "$date" },
+                    $dateToString: { format: "%Y-%m", date: "$date" },
                 },
             },
         },
         {
             $group: {
-                _id: { date: "$formattedDate", product: "$product" },
-                totalSold: { $sum: "$quantity" },
+                _id: { yearMonth: "$formattedDate", product: "$product" },
+                count: { $sum: "$quantity" },
             },
         },
         {
-            $sort: { "_id.date": 1, totalSold: -1 },
+            $sort: { "_id.yearMonth": 1, count: -1 },
         },
     ]);
 }
@@ -192,7 +192,18 @@ async function productPopularity(db) {
 		- Filter sales with price greater than 1000
 		- You may add another document to the sales collection to test the outlier detection.
 	*/
+async function addNewOutlinerDocument() {
+    await db.sales.insertOne({
+        _id: 4,
+        product: "D",
+        quantity: 1,
+        category: "Electronics",
+        price: 1500, // This is > 1000, so it will show up as an outlier!
+        date: new Date("2024-08-10T14:30:00.000Z"),
+    });
+}
 async function salesOutlier(db) {
+    await addNewOutlinerDocument();
     return await // Add only query here. Make sure your query doesn't have a semicolon at the end.
     db.sales.aggregate([
         {
@@ -230,7 +241,7 @@ async function quantityLessThan3(db) {
         {
             $group: {
                 _id: null,
-                totalDocuments: { $sum: 1 },
+                salesQuantityLessThan3: { $sum: 1 }, // 3 or 10?
             },
         },
     ]);
@@ -251,7 +262,7 @@ async function priceLessThan100(db) {
         {
             $group: {
                 _id: null,
-                totalDocuments: { $sum: 1 },
+                salesPriceLessThan100: { $sum: 1 },
             },
         },
     ]);
