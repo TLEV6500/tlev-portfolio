@@ -139,7 +139,7 @@ async function addOneFunc(db) {
     return await (
 
         // Add only query here. Make sure your query doesn't have a semicolon at the end.
-
+        db.rooms.findOne({name:"double"})
 
 
         
@@ -154,7 +154,12 @@ async function addOneFunc(db) {
  function updateOneFunc(db) {
 
      // Add only query here. Make sure your query doesn't have a semicolon at the end.
-
+    db.rooms.updateOne(
+    {name:"queen"},
+    {
+      $set:{rooms_available:0}
+    }
+      )
  };
 
  /* 
