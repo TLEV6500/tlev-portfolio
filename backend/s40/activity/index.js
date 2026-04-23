@@ -128,12 +128,12 @@ async function demographicsByAge(db) {
     db.customers.aggregate([
         {
             $match: {
-                age: { $gte: 18 },
+                age: { $gte: 20, $lte: 40 },
             },
         },
         {
             $group: {
-                _id: "$age",
+                _id: null,
                 count: { $sum: 1 },
             },
         },
